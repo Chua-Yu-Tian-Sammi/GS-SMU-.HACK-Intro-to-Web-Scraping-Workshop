@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gradient-to-br from-indigo-100 to-blue-200 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow sticky top-0 z-10">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <img class="w-8 h-8" src="https://images.ctfassets.net/gzhf2ey3l7ai/5acqAyRMHRRhM5bBs2Mu4i/018f35e00a488adbfe4d748c08534cd3/Untitled_design__3__0.png" alt=".hack logo">
+          <span class="text-xl font-bold text-indigo-700 tracking-tight">SMU .Hack 2025 HEAP Dashboard</span>
+        </div>
+        <div class="text-gray-600">Welcome, <span class="font-semibold text-indigo-700">heapuser</span>!</div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="max-w-5xl mx-auto mt-10 px-4">
+      <div id="content"></div>
+      <div class="flex justify-center mt-4">
+        <button onclick="loadMore()" id="load-more"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition focus:outline-none focus:ring-2 focus:ring-indigo-300">
+          Load More
+        </button>
+      </div>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>
