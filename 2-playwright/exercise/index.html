@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HEAP 2025 Exercise Playwright</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen flex flex-col items-center justify-center">
+
+  <div class="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
+    <h2 class="text-3xl font-extrabold text-indigo-700 mb-4">.Hack 2025 HEAP Playwright Exercise</h2>
+    <button id="openModal"
+      class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-200">
+      Open Modal
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+    <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-sm relative animate-fade-in">
+      <button id="closeModal"
+        class="absolute top-3 right-3 text-gray-400 hover:text-indigo-600 text-2xl font-bold focus:outline-none">
+        &times;
+      </button>
+      <h3 class="text-2xl font-bold text-indigo-700 mb-2">This is a secret content</h3>
+      <p id="modalText" class="text-gray-700 text-lg">
+        This is the hidden content to scrape!
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('myModal');
+    const btn = document.getElementById('openModal');
+    const span = document.getElementById('closeModal');
+
+    btn.onclick = function() { modal.classList.remove('hidden'); }
+    span.onclick = function() { modal.classList.add('hidden'); }
+    window.onclick = function(event) {
+      if (event.target == modal) { modal.classList.add('hidden'); }
+    }
+  </script>
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fade-in {
+      animation: fade-in 0.3s ease;
+    }
+  </style>
+</body>
+</html>
