@@ -69,7 +69,7 @@ def login_and_scrape():
 
         time.sleep(3) # To show the login form before submitting
         page.click('button[type="submit"]')
-        page.wait_for_load_state('networkidle')
+        page.wait_for_load_state('domcontentloaded')
 
         # Step 3: Scrape initial content (each row in #content)
         initial_contents = extract_content_and_images(page, '#content')
