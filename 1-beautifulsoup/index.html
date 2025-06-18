@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fictional Bookstore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .book-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .book-title {
+      font-size: 1.25rem;
+      color: #4a90e2;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .price, .stock, .rating {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #eee;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>.Hack HEAP Bookstore</h1>
+    <p>Your favorite sci-fi books all in one place.</p>
+  </header>
+
+  <main>
+    <div class="book-grid">
+      <div class="book-card">
+        <h2 class="book-title">Dune</h2>
+        <p class="description">A classic sci-fi epic on desert warfare and politics.</p>
+        <p class="price">$14.99</p>
+        <p class="stock">In stock</p>
+        <p class="rating">★★★★☆</p>
+      </div>
+
+      <div class="book-card">
+        <h2 class="book-title">Neuromancer</h2>
+        <p class="description">The cyberpunk novel that redefined sci-fi tech noir.</p>
+        <p class="price">$12.50</p>
+        <p class="stock">Out of stock</p>
+        <p class="rating">★★★☆☆</p>
+      </div>
+
+      <div class="book-card">
+        <h2 class="book-title">Foundation</h2>
+        <p class="description">Asimov’s seminal work on psychohistory and galactic empires.</p>
+        <p class="price">$10.00</p>
+        <p class="stock">In stock</p>
+        <p class="rating">★★★★★</p>
+      </div>
+
+      <div class="book-card">
+        <h2 class="book-title">Snow Crash</h2>
+        <p class="description">A mind-bending look at information, linguistics, and the metaverse.</p>
+        <p class="price">$11.75</p>
+        <p class="stock">In stock</p>
+        <p class="rating">★★★★☆</p>
+      </div>
+
+      <div class="book-card">
+        <h2 class="book-title">The Left Hand of Darkness</h2>
+        <p class="description">An exploration of gender and society on a faraway planet.</p>
+        <p class="price">$9.80</p>
+        <p class="stock">Low stock</p>
+        <p class="rating">★★★★☆</p>
+      </div>
+
+      <div class="book-card">
+        <h2 class="book-title">Hyperion</h2>
+        <p class="description">A space pilgrimage tale inspired by "The Canterbury Tales".</p>
+        <p class="price">$13.40</p>
+        <p class="stock">In stock</p>
+        <p class="rating">★★★★★</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Fictional Bookstore</p>
+  </footer>
+</body>
+</html>
