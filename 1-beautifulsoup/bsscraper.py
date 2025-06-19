@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Step 1: Place the URL & Access its contents
-URL = "https://beautiful-soup-workshop.vercel.app/"
+URL = ""
 
 ## For "not accepted" error: add user agent (can find your user agent here: https://www.whatismyip.com/user-agent/ 
 #                                            -> replace it in the header)
@@ -22,39 +22,33 @@ print(soup.prettify()) # this prints the raw HTML
 print("\n--- End snippet ---\n")
 
 # CHALLENGE 1: Extract all book titles
-titles = soup.find_all("h2", class_="book-title")
-for title in titles:
-    print(title.get_text())
+# TODO: fill in the relevant attributes to filter
+    # hint: use get_text()
+
+# titles = soup.find_all(...)
 
 # CHALLENGE 2: Structured Pairing
-books = soup.find_all("div", class_="book-card")
-for book in books:
-    title = book.find("h2", class_="book-title").get_text()
-    price = book.find("p", class_="price").get_text()
-    print(f"{title} - {price}")
+# TODO: fill in the relevant attributes, print using this format: print(f"{title} - {price}")
+
+# books = soup.find_all(...)
+
 
 # CHALLENGE 3: Conditional Filtering
-books = soup.find_all("div", class_="book-card")
-for book in books:
-    stock = book.find("p", class_="stock").get_text()
-    if "In stock" in stock:
-        title = book.find("h2", class_="book-title").get_text()
-        print(f"{title} ({stock})")
+# TODO: conditionally print "In stock" books, print using this format: print(f"{title} ({stock})")
+
+# for book in books:
+#     stock = book.find(...).get_text()
+
 
 # CHALLENGE 4: Data Aggregation & Comparison -- find books with highest price
-top_books = []
-max_price = 0.0
+# TODO: fill in the relevant attributes and add some logic to compare the prices
 
-for book in books:
-    title = book.find("h2", class_="book-title").get_text()
-    price_text = book.find("p", class_="price").get_text()
-    price = float(price_text.strip('$'))  # Convert "$14.99" to 14.99
+# top_books = []
+# max_price = 0.0
 
-    if price > max_price:
-        max_price = price
-        top_books = [(title, price)]
-    elif price == max_price:
-        top_books.append((title, price))
+# for book in books:
+#     price_text = book.find(...).get_text()
+#     price = float(price_text.strip('$'))  # Convert "$14.99" to 14.99
 
-for title, price in top_books:
-    print(f"{title} - ${price:.2f}")
+# for title, price in top_books:
+#     print(f"{title} - ${price:.2f}")
