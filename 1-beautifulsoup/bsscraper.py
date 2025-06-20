@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Step 1: Place the URL & Access its contents
-URL = ""
+URL = "https://beautiful-soup-workshop.vercel.app/"
 
 ## For "not accepted" error: add user agent (can find your user agent here: https://www.whatismyip.com/user-agent/ 
 #                                            -> replace it in the header)
